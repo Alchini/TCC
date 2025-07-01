@@ -75,7 +75,8 @@ O jogador assume o papel de um jovem em busca de seus pais desaparecidos em regi
 
 -Desbloqueio de códices educativos contendo informações reais sobre cada criatura após batalhas.
 
-![Diagrama de Gameplay](https://imgur.com/a/4i3WM3O)
+<img src="https://imgur.com/x3tPbxF.png" alt="Diagrama de Gameplay" width="600"/>
+
 
 ### 2.3. **Objetivo Educativo:**
 
