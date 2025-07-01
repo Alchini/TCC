@@ -183,7 +183,7 @@ Descrição detalhada da proposta, incluindo requisitos de software, arquitetura
  - Áudio: WAV/OGG para efeitos e trilha.
  - Saves: JSON ou PlayerPrefs com criptografia básica.
 
-### ✅ 3.8. Restrições Técnicas
+### 3.8. Restrições Técnicas
 
  - Sem multiplayer ou online features.
  - Sem dublagem de voz (apenas texto).
