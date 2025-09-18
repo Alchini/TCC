@@ -1,0 +1,302 @@
+Using pre-set license
+Built from '6000.0/staging' branch; Version is '6000.0.47f1 (2ad1ed33fd3b) revision 2806253'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'pt' Physical Memory: 7876 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.47f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/Gustavo/Project Lung
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+65142
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+Successfully changed project path to: C:/Users/Gustavo/Project Lung
+C:/Users/Gustavo/Project Lung
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [12460]  Target information:
+
+Player connection [12460]  * "[IP] 26.15.184.239 [Port] 0 [Flags] 2 [Guid] 1498740811 [EditorId] 1498740811 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JRFT3TM) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [12460]  * "[IP] 192.168.1.12 [Port] 0 [Flags] 2 [Guid] 1498740811 [EditorId] 1498740811 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-JRFT3TM) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [12460] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [12460] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 35.39 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.47f1 (2ad1ed33fd3b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Gustavo/Project Lung/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 Laptop GPU (ID=0x25e2)
+    Vendor:   NVIDIA
+    VRAM:     3964 MB
+    Driver:   32.0.15.7652
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56280
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.019379 seconds.
+- Loaded All Assemblies, in  2.010 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.383 seconds
+Domain Reload Profiling: 3369ms
+	BeginReloadAssembly (783ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (5ms)
+	RebuildCommonClasses (199ms)
+	RebuildNativeTypeToScriptingClass (93ms)
+	initialDomainReloadingComplete (306ms)
+	LoadAllAssembliesAndSetupDomain (600ms)
+		LoadAssemblies (777ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (570ms)
+			TypeCache.Refresh (563ms)
+				TypeCache.ScanAssembly (512ms)
+			BuildScriptInfoCaches (1ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1386ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1283ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (72ms)
+			SetLoadedEditorAssemblies (16ms)
+			BeforeProcessingInitializeOnLoad (219ms)
+			ProcessInitializeOnLoadAttributes (742ms)
+			ProcessInitializeOnLoadMethodAttributes (233ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  3.861 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 10.53 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 8.63 ms, found 4 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  7.036 seconds
+Domain Reload Profiling: 10874ms
+	BeginReloadAssembly (556ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (18ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (69ms)
+	RebuildCommonClasses (112ms)
+	RebuildNativeTypeToScriptingClass (34ms)
+	initialDomainReloadingComplete (130ms)
+	LoadAllAssembliesAndSetupDomain (3004ms)
+		LoadAssemblies (1795ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1536ms)
+			TypeCache.Refresh (1327ms)
+				TypeCache.ScanAssembly (1246ms)
+			BuildScriptInfoCaches (185ms)
+			ResolveRequiredComponents (18ms)
+	FinalizeReload (7037ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (6641ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (16ms)
+			BeforeProcessingInitializeOnLoad (613ms)
+			ProcessInitializeOnLoadAttributes (5797ms)
+			ProcessInitializeOnLoadMethodAttributes (164ms)
+			AfterProcessingInitializeOnLoad (42ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (42ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 18.59 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5521 unused Assets / (2.8 MB). Loaded Objects now: 5993.
+Memory consumption went from 176.4 MB to 173.5 MB.
+Total: 30.956800 ms (FindLiveObjects: 1.797200 ms CreateObjectMapping: 1.968100 ms MarkObjects: 15.864200 ms  DeleteObjects: 11.319000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 266224.457630 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss atk 3 projectile-1.png
+  artifactKey: Guid(a076b1c0f74757b409e61eb606251413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss atk 3 projectile-1.png using Guid(a076b1c0f74757b409e61eb606251413) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5e5089f0e26addbfe05edd4da208ccbd') in 0.4107684 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk1.png
+  artifactKey: Guid(d5a3a18e302512c47a6369d6a137e820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk1.png using Guid(d5a3a18e302512c47a6369d6a137e820) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ab0e7159107158e650961e67c19710b1') in 0.1849751 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-idle.png
+  artifactKey: Guid(456b3ca4d78822b488f5cc08e200d749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-idle.png using Guid(456b3ca4d78822b488f5cc08e200d749) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a363926607cb3cae5669770ee2335bbf') in 0.1177418 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk1-return to neutral position.png
+  artifactKey: Guid(4ee13673219731840bfd6d4628b568f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk1-return to neutral position.png using Guid(4ee13673219731840bfd6d4628b568f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e911a7c2084e18d941bdec51478f473c') in 0.1768397 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk1-packed sheet.png
+  artifactKey: Guid(46986c83e07385e4eb63db6be498869f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk1-packed sheet.png using Guid(46986c83e07385e4eb63db6be498869f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d6c24bbe3aa9eaaccefc0c253c52966') in 0.1366022 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk2-fx1.png
+  artifactKey: Guid(bd740e6af32f7484196a7264e72960ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk2-fx1.png using Guid(bd740e6af32f7484196a7264e72960ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3194c1e7f46a670006cb39c036ab029e') in 0.0840001 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Enemy 2/enemy 2-atk1-return neutral pose.png
+  artifactKey: Guid(1b49bc1a7e0825143b172a16838f75f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Enemy 2/enemy 2-atk1-return neutral pose.png using Guid(1b49bc1a7e0825143b172a16838f75f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0888931eba64dfbad9fc2fd62e04a573') in 0.0802488 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Enemy 2/enemy 2-hurt.png
+  artifactKey: Guid(eff9f078acf7b854dae9f4627b6cbebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Enemy 2/enemy 2-hurt.png using Guid(eff9f078acf7b854dae9f4627b6cbebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5586bfad83563062cfbf5a0b21a5508a') in 0.091044 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Enemy 1/enemy 1-walk.png
+  artifactKey: Guid(3ba0d48e6b23bba41a334936a3d52d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Enemy 1/enemy 1-walk.png using Guid(3ba0d48e6b23bba41a334936a3d52d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b312922b220b6d43b718abd4324e991f') in 0.1008719 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Enemy 1/enemy 1-atk1-no smear.png
+  artifactKey: Guid(6d952c926b41f894790160d02f08ba18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Enemy 1/enemy 1-atk1-no smear.png using Guid(6d952c926b41f894790160d02f08ba18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '85b7f74ff0303a31c13f9b1f7c0e183f') in 0.1323294 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk1-return to neutral pose-packet sheet.png
+  artifactKey: Guid(dd1d5eb212dcdd34e98efa151bd701c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk1-return to neutral pose-packet sheet.png using Guid(dd1d5eb212dcdd34e98efa151bd701c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '320d4fddf616a5a6ad849e88c90555db') in 0.1325061 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk3-fx-starter.png
+  artifactKey: Guid(20d8507cb4ed3624c845b18a99607ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RafaelMatos/ERW - The Depths V1.5.1/Characters/Boss/boss anims-atk3-fx-starter.png using Guid(20d8507cb4ed3624c845b18a99607ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '49e96153d241e6a423d794477a8d7e1d') in 0.0445517 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
