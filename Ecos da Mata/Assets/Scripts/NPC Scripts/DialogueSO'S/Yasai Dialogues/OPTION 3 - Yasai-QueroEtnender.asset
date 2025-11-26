@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: OPTION 3 - Yasai-QueroEtnender
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 8e643f8dbf978b8468d9942ec1795df6, type: 2}
+    text: "Ele \xE9 a crian\xE7a da mata\u2026 e o guardi\xE3o mais velho que existe."
+  - speaker: {fileID: 11400000, guid: 8e643f8dbf978b8468d9942ec1795df6, type: 2}
+    text: "\xC9 brincadeira e puni\xE7\xE3o, \xE9 fogo e raiz.\nEntender o Curupira
+      \xE9 aceitar que a floresta n\xE3o \xE9 sua, voc\xEA \xE9 dela."
+  options: []
+  requiredNPCs: []
+  requiredLocations: []

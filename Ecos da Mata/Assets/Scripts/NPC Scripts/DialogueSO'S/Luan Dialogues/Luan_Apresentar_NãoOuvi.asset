@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: "Luan_Apresentar_N\xE3oOuvi"
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 27ffcf8a42450a445ac83a486efa445e, type: 2}
+    text: "Ent\xE3o presta aten\xE7\xE3o. Quando o Curupira assobia, \xE9 aviso.
+      Quer aprender a diferenciar?"
+  options:
+  - optionText: Quero sim.
+    nextDialogue: {fileID: 11400000, guid: 7adb7a8231b6f7443b742afdeca3feeb, type: 2}
+  - optionText: "N\xE3o, valeu. Isso d\xE1 medo."
+    nextDialogue: {fileID: 11400000, guid: cb29a02d32a4eb04d98de0b7297bf492, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

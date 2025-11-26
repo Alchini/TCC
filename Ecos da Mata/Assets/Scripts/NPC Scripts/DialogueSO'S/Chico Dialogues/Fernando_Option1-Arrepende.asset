@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: Fernando_Option1-Arrepende
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: Todo.
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: Santo.
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: Dia.
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "O Boitat\xE1 protegia a mata\u2026 e eu destru\xED o protetor dela. Agora,
+      o vazio que ficou\u2026 \xE9 maior do que qualquer inc\xEAndio."
+  options: []
+  requiredNPCs: []
+  requiredLocations: []

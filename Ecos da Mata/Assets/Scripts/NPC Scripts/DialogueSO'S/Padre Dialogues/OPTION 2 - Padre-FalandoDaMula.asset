@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: OPTION 2 - Padre-FalandoDaMula
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: ede244495ebbd034b95ae764f4cf3fac, type: 2}
+    text: "Essa \"Mula\" Um dia foi uma mulher que riu e sonhou\u2026"
+  - speaker: {fileID: 11400000, guid: ede244495ebbd034b95ae764f4cf3fac, type: 2}
+    text: "agora... ela \xE9 s\xF3 fogo... e ang\xFAstia."
+  options:
+  - optionText: "Voc\xEA quer quebrar a maldi\xE7\xE3o?"
+    nextDialogue: {fileID: 11400000, guid: 9a858869b6f835944ad88a03cdceaab3, type: 2}
+  - optionText: "O que voc\xEA espera que eu fa\xE7a?"
+    nextDialogue: {fileID: 11400000, guid: 2416516782693bd43bc1833a9a82cc32, type: 2}
+  - optionText: "Voc\xEA ainda a v\xEA?"
+    nextDialogue: {fileID: 11400000, guid: 29f3c8a76391e624e955655b617bfbc0, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

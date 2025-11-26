@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: Padre_Option2-AindaVe
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: ede244495ebbd034b95ae764f4cf3fac, type: 2}
+    text: "\xC0s vezes ela para e apenas olha para mim..."
+  - speaker: {fileID: 11400000, guid: ede244495ebbd034b95ae764f4cf3fac, type: 2}
+    text: "Por mais que ela fique por perto, ela n\xE3o tem consci\xEAncia, apenas
+      me olha... como se quisesse falar algo. "
+  options: []
+  requiredNPCs: []
+  requiredLocations: []

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: Pescador_Apresentar
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 8477f8c869d3a374dafbf6a961f6d01f, type: 2}
+    text: "Vai ter festa na beira do rio hoje\u2026 Tomara que o Boto n\xE3o resolva
+      aparecer de palet\xF3 branco."
+  options:
+  - optionText: Se aparecer, eu quero ver de perto.
+    nextDialogue: {fileID: 11400000, guid: fe2edd29ca9f886438026d6650cc2902, type: 2}
+  - optionText: "Isso n\xE3o passa de hist\xF3ria pra assustar."
+    nextDialogue: {fileID: 11400000, guid: 21dc30c6c5b30df4cb755d2ee93b4781, type: 2}
+  - optionText: "N\xE3o gosto de criatura que engana os outros."
+    nextDialogue: {fileID: 11400000, guid: cbac417c39a66f0428e1732d6d1ad90e, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

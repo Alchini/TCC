@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: Padre_Option2-QuebrarOqueFazer
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: ede244495ebbd034b95ae764f4cf3fac, type: 2}
+    text: "Preciso criar coragem para mont\xE1-la e retirar-lhe o freio... Mas n\xE3o
+      consigo, ela n\xE3o permite."
+  - speaker: {fileID: 11400000, guid: ede244495ebbd034b95ae764f4cf3fac, type: 2}
+    text: E por favor...
+  - speaker: {fileID: 11400000, guid: ede244495ebbd034b95ae764f4cf3fac, type: 2}
+    text: "N\xE3o encoste nela."
+  options: []
+  requiredNPCs: []
+  requiredLocations: []

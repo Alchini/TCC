@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: OPTION 1 - chico - Matou
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "Matei. Ou pelo menos\u2026 tentei."
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "Ele queimou minha pele, meus homens e metade da floresta. Mas no fim\u2026
+      ele tombou."
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "Os ossos\u2026 ainda queimam."
+  options:
+  - optionText: Como foi a batalha?
+    nextDialogue: {fileID: 11400000, guid: 9d7c7e05b5ca9134893f9484353e739b, type: 2}
+  - optionText: "Voc\xEA se arrepende?"
+    nextDialogue: {fileID: 11400000, guid: 1c3f81752972bc141b4a3719294b3e75, type: 2}
+  - optionText: "Isso n\xE3o parece uma vit\xF3ria."
+    nextDialogue: {fileID: 11400000, guid: 958b4a28b660d8a42bf4e837a9d23b0d, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

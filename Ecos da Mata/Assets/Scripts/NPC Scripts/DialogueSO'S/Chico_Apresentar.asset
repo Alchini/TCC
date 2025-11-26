@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: Chico_Apresentar
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "Esse fogo\u2026"
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "Nunca apagou. Nem quando eu cravei a l\xE2mina no cora\xE7\xE3o flamejante
+      do maldito."
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "Voc\xEA sabe o que \xE9 matar um monstro que nasceu da pr\xF3pria f\xFAria
+      da floresta?"
+  options:
+  - optionText: "Voc\xEA\u2026 matou o Boitat\xE1?"
+    nextDialogue: {fileID: 11400000, guid: 9782d5cd52f00644fba4ad25ba0079c2, type: 2}
+  - optionText: "Por que voc\xEA fez isso?"
+    nextDialogue: {fileID: 11400000, guid: e2cbf04acac562b4d926b7a4e7a20345, type: 2}
+  - optionText: "Voc\xEA parece assombrado por isso."
+    nextDialogue: {fileID: 11400000, guid: fe93f6bbd58f18e499b6eab0b8f2f9bf, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

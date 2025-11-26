@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2567735fc71173040aa1db8b793cf67c, type: 3}
+  m_Name: Davi
+  m_EditorClassIdentifier: 
+  actorName: Davi
+  portrait: {fileID: 1877785692, guid: 354d657564d6c844caf4c1e044f838fe, type: 3}

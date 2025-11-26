@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: Luan_Apresentar
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 27ffcf8a42450a445ac83a486efa445e, type: 2}
+    text: Opa
+  - speaker: {fileID: 11400000, guid: 27ffcf8a42450a445ac83a486efa445e, type: 2}
+    text: "Voc\xEA ouviu aquele assobio estranho vindo da mata? N\xE3o parecia de
+      bicho nenhum"
+  options:
+  - optionText: Ouvi...Pode ser o Curupira
+    nextDialogue: {fileID: 11400000, guid: a0fc059fb0b9ff948b98961ecb5ddbc8, type: 2}
+  - optionText: "Assobio? N\xE3o ouvi nada."
+    nextDialogue: {fileID: 11400000, guid: 69a86bc4634b48f4787f406be1f212b9, type: 2}
+  - optionText: "Eu n\xE3o me meto com floresta."
+    nextDialogue: {fileID: 11400000, guid: ce6fdfb50ab0ba940a893f03e65e4c7e, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

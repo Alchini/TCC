@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: Fernando_Option1-NaoPareceVitoria
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "Vit\xF3ria? Olhe ao redor. Fogo eterno, \xE1rvores mortas, minha alma
+      partida\u2026 e a sensa\xE7\xE3o de que algo foi arrancado do mundo."
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "Isso n\xE3o \xE9 vit\xF3ria. \xC9 s\xF3 sobreviv\xEAncia."
+  options: []
+  requiredNPCs: []
+  requiredLocations: []

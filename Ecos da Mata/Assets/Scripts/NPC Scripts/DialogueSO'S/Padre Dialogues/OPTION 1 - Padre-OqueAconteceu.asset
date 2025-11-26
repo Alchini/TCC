@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: OPTION 1 - Padre-OqueAconteceu
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: ede244495ebbd034b95ae764f4cf3fac, type: 2}
+    text: "Eu amei onde n\xE3o devia\u2026 e ela confiou em quem n\xE3o merecia."
+  options:
+  - optionText: "Voc\xEA a amava?"
+    nextDialogue: {fileID: 11400000, guid: 83589a41ba67fb4429190c9dbd898e3d, type: 2}
+  - optionText: Ela virou a criatura?
+    nextDialogue: {fileID: 11400000, guid: 23bc9649fff30ff45830c94c859b1d2b, type: 2}
+  - optionText: "Voc\xEA se culpa demais."
+    nextDialogue: {fileID: 11400000, guid: 29f3c8a76391e624e955655b617bfbc0, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

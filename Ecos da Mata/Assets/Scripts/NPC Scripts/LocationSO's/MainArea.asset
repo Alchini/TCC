@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebc4f1a6d194024c903784b807b104c, type: 3}
+  m_Name: MainArea
+  m_EditorClassIdentifier: 
+  locationID: MainArea
+  displayName: MainArea
+  locationMusic: {fileID: 8300000, guid: f7b5ee995906bcb4096dc04e302f73ae, type: 3}
+  locationAmbience: {fileID: 8300000, guid: 62ee90872a838cb46b94d485d2542c6a, type: 3}

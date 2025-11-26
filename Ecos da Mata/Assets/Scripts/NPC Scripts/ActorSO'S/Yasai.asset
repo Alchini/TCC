@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2567735fc71173040aa1db8b793cf67c, type: 3}
+  m_Name: Yasai
+  m_EditorClassIdentifier: 
+  actorName: Yasai
+  portrait: {fileID: 395810204, guid: b57e74b35fdcd3d4cae5c8940378e913, type: 3}

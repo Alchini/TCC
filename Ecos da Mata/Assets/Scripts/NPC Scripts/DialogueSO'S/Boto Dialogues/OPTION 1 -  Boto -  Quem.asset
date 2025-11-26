@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: OPTION 1 -  Boto -  Quem
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 398806bf4c8051b4fb9df2e4a379635c, type: 2}
+    text: "Hehe.. Sou apenas um viajante\u2026 algu\xE9m que sabe reconhecer beleza
+      na noite. E voc\xEA\u2026 quem \xE9?"
+  options:
+  - optionText: "S\xF3 um curioso."
+    nextDialogue: {fileID: 11400000, guid: a4b2c852c61bb0b4189eeeec7da2a34a, type: 2}
+  - optionText: "Algu\xE9m que n\xE3o confia em estranhos."
+    nextDialogue: {fileID: 11400000, guid: 5ea4191133f841340b41f46663caad81, type: 2}
+  - optionText: "Algu\xE9m que talvez queira dan\xE7ar."
+    nextDialogue: {fileID: 11400000, guid: 527fbef6c5384c545ae5a5507bb4beb7, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: OPTION 2 - Fernando-PegaramSuasCoisas
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 88e0965182cf53d4a9f93d402d03a6a6, type: 2}
+    text: "Ningu\xE9m aqui tem coragem pra isso. S\xF3 o Saci se arrisca. Quer saber
+      como despistar ele?"
+  options:
+  - optionText: Quero sim.
+    nextDialogue: {fileID: 11400000, guid: b9f2949c28525144da231b0506c6fb29, type: 2}
+  - optionText: "N\xE3o, deixa ele brincar."
+    nextDialogue: {fileID: 11400000, guid: 5ede81ce5d8e8f74aa63060b08257844, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

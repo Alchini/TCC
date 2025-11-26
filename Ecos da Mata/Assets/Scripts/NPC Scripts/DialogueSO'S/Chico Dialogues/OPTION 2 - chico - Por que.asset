@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: OPTION 2 - chico - Por que
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "Porque deram ordem. Porque disseram que o fogo ia alcan\xE7ar as aldeias.
+      Porque chamaram de amea\xE7a o que eu n\xE3o entendia."
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "E porque\u2026."
+  - speaker: {fileID: 11400000, guid: 543c2ce465cfb5b42bfffb1f50810c3d, type: 2}
+    text: "eu era jovem demais pra perceber que medo n\xE3o \xE9 desculpa pra matar."
+  options:
+  - optionText: Sinto Muito.
+    nextDialogue: {fileID: 11400000, guid: d60703b85d22c184c82ad40a9cc352d9, type: 2}
+  - optionText: "Voc\xEA foi enganado."
+    nextDialogue: {fileID: 11400000, guid: d8ff060c31a4d7844b7a3c68512247cc, type: 2}
+  - optionText: "Parecia necess\xE1rio."
+    nextDialogue: {fileID: 11400000, guid: 5c5b3cf9730f08c409e244233accea88, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

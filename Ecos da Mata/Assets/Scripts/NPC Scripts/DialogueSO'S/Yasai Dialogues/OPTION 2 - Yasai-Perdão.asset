@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: "OPTION 2 - Yasai-Perd\xE3o"
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 8e643f8dbf978b8468d9942ec1795df6, type: 2}
+    text: "Todo mundo ofende a floresta sem perceber. Apassar uma trilha, quebrar
+      um ramo, pisar num formigueiro\u2026 o Curupira v\xEA tudo."
+  options:
+  - optionText: "Ent\xE3o ele odeia humanos?"
+    nextDialogue: {fileID: 11400000, guid: 97698d105213bb145a86378af808a0fd, type: 2}
+  - optionText: "Como pe\xE7o perd\xE3o?"
+    nextDialogue: {fileID: 11400000, guid: eb46d7478c1d23745805d69bffb107e5, type: 2}
+  - optionText: "Eu n\xE3o fiz nada errado."
+    nextDialogue: {fileID: 11400000, guid: 145bf99f001f75f43a3b1fcb5dcc6ce7, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

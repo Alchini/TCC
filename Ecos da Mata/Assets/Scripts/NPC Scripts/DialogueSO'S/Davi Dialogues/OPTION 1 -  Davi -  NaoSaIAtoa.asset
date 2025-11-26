@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: OPTION 1 -  Davi -  NaoSaIAtoa
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: f4369293224abb64f9e9d6a581ab144b, type: 2}
+    text: "Exato\u2026 quando ela sai, \xE9 porque t\xE1 atr\xE1s de algu\xE9m. Voc\xEA
+      acha que ela veio atr\xE1s de quem?"
+  options:
+  - optionText: "Talvez de alguma crian\xE7a desobediente."
+    nextDialogue: {fileID: 11400000, guid: eccc66787ee6aac40a510b91f6d2f45b, type: 2}
+  - optionText: "Pode ser de algu\xE9m que mexeu com magia."
+    nextDialogue: {fileID: 11400000, guid: 84996a558fcb604408a0d1b02bbec23a, type: 2}
+  - optionText: "Espero que n\xE3o seja de mim!"
+    nextDialogue: {fileID: 11400000, guid: 2f64506d91a19e24f8407f09da78fd83, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

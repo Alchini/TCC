@@ -1,153 +1,144 @@
-using UnityEngine;
+/*using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class EnemyChase2D : MonoBehaviour
+public class Enemy_Movement : MonoBehaviour
 {
-    [Header("Alvos")]
-    public Transform player;
-    public string playerTag = "Player";
+    public float speed;
+    public float attackRange = 2;
+    public float attackCollDown = 2;
+    public float playerDetectDistance = 5;
+    public bool enemyOn = false;
+    public Transform detectionPoint;
+    public LayerMask playerLayer;
 
-    [Header("Movimento")]
-    public float speed = 3f;
-    public float chaseRange = 8f;
-    public float stopDistance = 1.2f;   // distância de “parada” para não grudar
+    private float attackCollDownTimer;
+    private int facingDirection = 1;
+    private EnemyState enemyState;
 
-    [Header("Ataque")]
-    public float attackRange = 1.1f;    // quando entrar aqui, tenta atacar
-    public float attackCooldown = 1.0f; // segundos entre ataques
-    public int attackDamage = 10;      
-    public LayerMask targetLayers;     
-
-    [Header("Visão (opcional)")]
-    public bool useLineOfSight = false;
-    public LayerMask losObstacles;
-
-    [Header("Animação / Visual")]
-    public bool flipSpriteByX = true;
-    public Animator animator;           
-    public string moveBoolParam = "isMoving";
-    public string attackTriggerParam = "attack";
 
     private Rigidbody2D rb;
-    private float nextAttackTime = 0f;
+    private Transform player;
+    private Animator anim;
+    
 
-    void Awake()
+
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        if (player == null)
-        {
-            GameObject p = GameObject.FindGameObjectWithTag(playerTag);
-            if (p) player = p.transform;
-        }
+        anim = GetComponent<Animator>();
+        ChangeState(EnemyState.Idle);
     }
 
-    void FixedUpdate()
+
+    void Update()
     {
-        if (player == null)
-        {
-            StopMoving();
-            return;
-        }
+        if (!enemyOn) return;
 
-        Vector2 pos = rb.position;
-        Vector2 targetPos = player.position;
-        Vector2 toPlayer = targetPos - pos;
-        float dist = toPlayer.magnitude;
+        checkForPlayer();
+        if (attackCollDownTimer > 0)
+            attackCollDownTimer -= Time.deltaTime;
 
-        // fora do raio de perseguição
-        if (dist > chaseRange)
-        {
-            StopMoving();
-            return;
-        }
-
-        // dar uma olhada nisso dps
-        if (useLineOfSight)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(pos, toPlayer.normalized, dist, losObstacles);
-            if (hit.collider != null)
-            {
-                StopMoving();
-                return;
-            }
-        }
-
-        // caso q não vai acontecer
-        if (dist <= stopDistance)
-        {
+        if (enemyState == EnemyState.Chasing)
+            Chase();
+        else if (enemyState == EnemyState.Attacking)
             rb.linearVelocity = Vector2.zero;
-            SetMoving(false);
+    }
+
+
+    void Chase()
+    {
+
+        if (player.position.x > transform.position.x && facingDirection == -1 ||
+                player.position.x < transform.position.x && facingDirection == 1)
+        {
+            Flip();
+        }
+
+        Vector2 direction = (player.position - transform.position).normalized;
+        rb.linearVelocity = direction * speed;
+    }
+
+
+
+    void Flip()
+    {
+        facingDirection *= -1;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
+
+
+    private void checkForPlayer()
+    {
+
+        Collider2D[] hits = Physics2D.OverlapCircleAll(detectionPoint.position, playerDetectDistance, playerLayer);
+
+        if (hits.Length > 0)
+        {
+            player = hits[0].transform;
+
+            if (Vector2.Distance(transform.position, player.position) <= attackRange && attackCollDownTimer <= 0)
+            {
+                attackCollDownTimer = attackCollDown;
+                ChangeState(EnemyState.Attacking);
+            }
+
+            else if (Vector2.Distance(transform.position, player.position) > attackRange && enemyState != EnemyState.Attacking)
+            {
+                Debug.Log("ta perseguindo!");
+                ChangeState(EnemyState.Chasing);
+            }
         }
         else
         {
-            // perseguindo (WALK)
-            Vector2 dir = toPlayer / dist; 
-            rb.linearVelocity = dir * speed;
-            SetMoving(true);
-
-            if (flipSpriteByX && Mathf.Abs(rb.linearVelocity.x) > 0.01f)
-            {
-                Vector3 scale = transform.localScale;
-                scale.x = Mathf.Sign(rb.linearVelocity.x) * Mathf.Abs(scale.x);
-                transform.localScale = scale;
-            }
-        }
-
-        // checa ataque (distância + cooldown)
-        TryAttack(dist, pos, targetPos);
-    }
-
-    void TryAttack(float dist, Vector2 pos, Vector2 targetPos)
-    {
-        if (Time.time < nextAttackTime) return;
-
-        if (dist <= attackRange)
-        {
-
-            if (flipSpriteByX && Mathf.Abs(targetPos.x - pos.x) > 0.01f)
-            {
-                Vector3 scale = transform.localScale;
-                scale.x = Mathf.Sign(targetPos.x - pos.x) * Mathf.Abs(scale.x);
-                transform.localScale = scale;
-            }
-
-            // dispara animação de ATTACK
-            if (animator != null && !string.IsNullOrEmpty(attackTriggerParam))
-                animator.SetTrigger(attackTriggerParam);
-
-            nextAttackTime = Time.time + attackCooldown;
-
-
+            rb.linearVelocity = Vector2.zero;
+            ChangeState(EnemyState.Idle);
         }
     }
 
-    void StopMoving()
+    void ChangeState(EnemyState newState)
     {
-        rb.linearVelocity = Vector2.zero;
-        SetMoving(false);
+        if (enemyState == EnemyState.Idle)
+            anim.SetBool("IsIdle", false);
+        else if (enemyState == EnemyState.Chasing)
+            anim.SetBool("IsChasing", false);
+        else if (enemyState == EnemyState.Attacking)
+            anim.SetBool("IsAttacking", false);
+
+        enemyState = newState;
+
+        if (enemyState == EnemyState.Idle)
+            anim.SetBool("IsIdle", true);
+        else if (enemyState == EnemyState.Chasing)
+            anim.SetBool("IsChasing", true);
+        else if (enemyState == EnemyState.Attacking)
+            anim.SetBool("IsAttacking", true);
     }
 
-    void SetMoving(bool moving)
+    public void OnDrawGizmos()
     {
-        if (animator != null && !string.IsNullOrEmpty(moveBoolParam))
-            animator.SetBool(moveBoolParam, moving);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(detectionPoint.position, playerDetectDistance);
     }
 
-    public void OnAttackHit()
+    public bool iaAtiva = false;
+
+    public void ActivateEnemy()
     {
-        Vector2 center = (Vector2)transform.position;
-        Collider2D hit = Physics2D.OverlapCircle(center, attackRange, targetLayers);
-        if (hit)
-        {
-            // pra adicionar dps mecancia de dano
-        }
+        enemyOn = true;
+        ChangeState(EnemyState.Idle);
     }
 
-    // Gizmos
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow; Gizmos.DrawWireSphere(transform.position, chaseRange);
-        Gizmos.color = Color.cyan;   Gizmos.DrawWireSphere(transform.position, stopDistance);
-        Gizmos.color = Color.red;    Gizmos.DrawWireSphere(transform.position, attackRange);
-    }
+
 }
+
+public enum EnemyState
+{
+    Idle,
+    Chasing,
+    Attacking
+
+}
+
+*/

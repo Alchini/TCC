@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: Fernando_Apresentar
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 88e0965182cf53d4a9f93d402d03a6a6, type: 2}
+    text: Eai cara
+  - speaker: {fileID: 11400000, guid: 88e0965182cf53d4a9f93d402d03a6a6, type: 2}
+    text: "Voc\xEA reparou nas coisas sumindo do nada hoje cedo? Aposto que o Saci
+      t\xE1 aprontando por aqui\u2026"
+  options:
+  - optionText: "Se \xE9 o Saci, ele t\xE1 pegando leve hoje."
+    nextDialogue: {fileID: 11400000, guid: d813a6672439ea540a58184fbeeeae94, type: 2}
+  - optionText: "Algu\xE9m deve ter escondido suas coisas."
+    nextDialogue: {fileID: 11400000, guid: 117c3eff4b11dde4eb7eff1b7534ef26, type: 2}
+  - optionText: "Saci? Isso \xE9 coisa de gente cr\xE9dula."
+    nextDialogue: {fileID: 11400000, guid: dd3ef4f09ec358e45b1a9cbc30bc9e6e, type: 2}
+  requiredNPCs: []
+  requiredLocations: []

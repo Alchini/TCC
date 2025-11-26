@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fa1865023f044382845a9995070da, type: 3}
+  m_Name: Luan_Apresentar_Me_Conte_Mais
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 27ffcf8a42450a445ac83a486efa445e, type: 2}
+    text: "Ent\xE3o voc\xEA j\xE1 sabe do protetor das matas. Mas voc\xEA acredita
+      que ele realmente existe por aqui?"
+  - speaker: {fileID: 11400000, guid: 27ffcf8a42450a445ac83a486efa445e, type: 2}
+    text: "Ent\xE3o voc\xEA j\xE1 sabe do protetor das matas. Mas voc\xEA acredita
+      que ele realmente existe por aqui?"
+  options:
+  - optionText: Sim, e acho melhor respeitar.
+    nextDialogue: {fileID: 11400000, guid: e6a6dcf2df123fd43a1c1fe8a5383792, type: 2}
+  - optionText: "Talvez seja s\xF3 supersti\xE7\xE3o."
+    nextDialogue: {fileID: 11400000, guid: 282e5b0efdcc30f4681e015c97042e7f, type: 2}
+  - optionText: "Se ele aparecer eu fa\xE7o amizade."
+    nextDialogue: {fileID: 11400000, guid: 9d236060890509941a407f92b8fec848, type: 2}
+  requiredNPCs: []
+  requiredLocations: []
