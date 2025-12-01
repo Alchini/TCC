@@ -16,6 +16,13 @@ A maior parte dos jogos sobre folclore brasileiro é pensada como material didá
 
 ---
 
+## Documento de Design do Jogo (GDD)
+
+O Game Design Document (GDD) do projeto está disponível no repositório e descreve todos os elementos de design, mecânicas, narrativa, personagens e diretrizes criativas do jogo.
+Você pode acessá-lo aqui: [GDD](https://github.com/Alchini/TCC/blob/main/Ecos%20da%20Mata/Ecos%20da%20Mata%20GDD.docx)
+
+--- 
+
 ## Dependências
 
 ### Software
@@ -157,10 +164,12 @@ stateDiagram-v2
 
 ## Testes Automatizados
 
-O projeto inclui testes usando o **Unity Test Framework / NUnit**.
+O projeto inclui alguns testes usando o **Unity Test Framework / NUnit**.
 
-### `NPC_Wander` – Teste de Área de Movimentação
+### Exemplo - `NPC_Wander` – Teste de Área de Movimentação
 O script de teste **`NPC_Wander_Tests`** verifica se o NPC sempre escolhe um novo alvo dentro da área configurada de *wander*.
+
+
 
 ### Como Rodar os Testes
 
