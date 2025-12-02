@@ -19,13 +19,11 @@ public class DialogueManager : MonoBehaviour
     private DialogueSO currentDialogue;
     private int dialogueIndex;
 
-    // >>> NOVO: eventos e último speaker
     public event Action<DialogueSO> OnDialogueStarted;
     public event Action<DialogueSO> OnDialogueEnded;
 
     private ActorSO lastSpeaker;
     public ActorSO LastSpeaker => lastSpeaker;
-    // <<<
 
     private void Awake()
     {
@@ -48,9 +46,8 @@ public class DialogueManager : MonoBehaviour
         dialogueIndex = 0;
         isDialogueActive = true;
 
-        // >>> NOVO: evento de início
+        // evento padrao
         OnDialogueStarted?.Invoke(currentDialogue);
-        // <<<
 
         ShowDialogue();
     }
@@ -68,9 +65,9 @@ public class DialogueManager : MonoBehaviour
         DialogueLine line = currentDialogue.lines[dialogueIndex];
 
         DialogueHistoryTracker.Instance.RecordNPC(line.speaker);
-        // >>> NOVO: guarda quem falou por último
+        //falou por ultimo
         lastSpeaker = line.speaker;
-        // <<<
+   
 
         portrait.sprite = line.speaker.portrait;
         actorName.text = line.speaker.actorName;
@@ -101,7 +98,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            choiceButtons[0].GetComponentInChildren<TMP_Text>().text = "End";
+            choiceButtons[0].GetComponentInChildren<TMP_Text>().text = "Fechar";
             choiceButtons[0].onClick.AddListener(EndDialogue);
             choiceButtons[0].gameObject.SetActive(true);
         }

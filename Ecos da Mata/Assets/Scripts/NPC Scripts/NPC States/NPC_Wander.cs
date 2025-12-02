@@ -13,6 +13,12 @@ public class NPC_Wander : MonoBehaviour
     public float speed = 2;
     public Vector2 target;
 
+    private Vector2 lastPosition;
+    private float stuckTimer;
+    public float stuckCheckInterval = 1f;
+    public float stuckDistanceThreshold = 0.05f;
+
+
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -27,7 +33,6 @@ public class NPC_Wander : MonoBehaviour
 
     private void Update()
     {
-
         if (isPaused)
         {
             rb.linearVelocity = Vector2.zero;
@@ -35,10 +40,31 @@ public class NPC_Wander : MonoBehaviour
         }
 
         if (Vector2.Distance(transform.position, target) < .1f)
+        {
             StartCoroutine(PauseAndPickNewDestination());
+            return; // evita chamar Move no mesmo frame
+        }
 
         Move();
+
+        // --- DETECÇÃO DE TRAVAMENTO ---
+        stuckTimer += Time.deltaTime;
+
+        if (stuckTimer >= stuckCheckInterval)
+        {
+            float movedDistance = Vector2.Distance(transform.position, lastPosition);
+
+            // Se quase não saiu do lugar no intervalo, considera travado
+            if (movedDistance < stuckDistanceThreshold)
+            {
+                StartCoroutine(PauseAndPickNewDestination());
+            }
+
+            lastPosition = transform.position;
+            stuckTimer = 0f;
+        }
     }
+
 
 
     private void Move()
@@ -75,8 +101,16 @@ public class NPC_Wander : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isPaused) return;
+
+        // empurra um pouquinho pro lado oposto ao ponto de contato
+        var contact = collision.GetContact(0);
+        Vector2 away = ((Vector2)transform.position - contact.point).normalized;
+        transform.position += (Vector3)(away * 0.05f); // ajuste esse valor se necessário
+
         StartCoroutine(PauseAndPickNewDestination());
     }
+
 
 
 

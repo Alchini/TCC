@@ -49,13 +49,13 @@ public class FolkloreQuestManager : MonoBehaviour
 
     private void Start()
     {
-        // caso o DialogueManager seja criado depois do OnEnable
+
         TrySubscribe();
     }
 
     private void Update()
     {
-        // se ainda não inscreveu, fica tentando até o DialogueManager existir
+
         if (!isSubscribed)
             TrySubscribe();
     }
@@ -164,10 +164,14 @@ public class FolkloreQuestManager : MonoBehaviour
         {
             IsCompleted = true;
             Debug.Log($"Quest '{questTitle}' COMPLETA!");
+
+            // === CHAMAR MENU FINAL ===
+            EndQuestMenuController.Instance.Show();
         }
 
         DispararAtualizacao();
     }
+
 
     private void DispararAtualizacao()
     {

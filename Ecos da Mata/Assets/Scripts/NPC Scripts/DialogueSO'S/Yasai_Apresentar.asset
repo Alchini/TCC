@@ -21,10 +21,10 @@ MonoBehaviour:
       ou o perd\xE3o dele?"
   options:
   - optionText: "Ben\xE7\xE3o? Por que eu precisaria disso?"
-    nextDialogue: {fileID: 11400000, guid: a4b573d2a752c0f4faff64182cd52ead, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 5ae1d7a621894334ea9544a250dc6e4f, type: 2}
   - optionText: "Perd\xE3o? O que eu fiz?"
-    nextDialogue: {fileID: 11400000, guid: ddb53badf5ad868498fd3cc5202ce0bb, type: 2}
+    nextDialogue: {fileID: 11400000, guid: a56f6da36cf80f44a893d324ca6f97cf, type: 2}
   - optionText: "S\xF3 quero entender quem ele realmente \xE9."
-    nextDialogue: {fileID: 11400000, guid: 07579b9125d5e664faca7f8906d23207, type: 2}
+    nextDialogue: {fileID: 11400000, guid: b568187fc2f78f349b817d56b038f873, type: 2}
   requiredNPCs: []
   requiredLocations: []

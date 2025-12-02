@@ -19,7 +19,7 @@ MonoBehaviour:
       ou perdido."
   options:
   - optionText: "Como eu recebo essa ben\xE7\xE3o?"
-    nextDialogue: {fileID: 11400000, guid: 83589a41ba67fb4429190c9dbd898e3d, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 99a61b0d95ecdbb48bc4f22272bdc57f, type: 2}
   - optionText: "E se ele decidir que eu n\xE3o mere\xE7o?"
     nextDialogue: {fileID: 11400000, guid: 53f12babc478f474b99d77d9c192954b, type: 2}
   - optionText: "Isso \xE9 s\xF3 supersti\xE7\xE3o."

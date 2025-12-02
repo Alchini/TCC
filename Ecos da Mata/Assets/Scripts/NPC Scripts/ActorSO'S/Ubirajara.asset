@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Ubirajara
   m_EditorClassIdentifier: 
   actorName: Ubirajara
-  portrait: {fileID: -357196347, guid: 47420a11b80979a46bcf3761a07004e4, type: 3}
+  portrait: {fileID: -357196347, guid: 50ff52cdfa2392748b312755495bc2db, type: 3}

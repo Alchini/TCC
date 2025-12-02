@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gustavo\\TCC\\Project Lung\\Assembly-CSharp.csproj": {}
+    "C:\\Users\\Gustavo\\ecos1.1\\TCC\\Ecos da Mata\\Assembly-CSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gustavo\\TCC\\Project Lung\\Assembly-CSharp.csproj": {
+    "C:\\Users\\Gustavo\\ecos1.1\\TCC\\Ecos da Mata\\Assembly-CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gustavo\\TCC\\Project Lung\\Assembly-CSharp.csproj",
+        "projectUniqueName": "C:\\Users\\Gustavo\\ecos1.1\\TCC\\Ecos da Mata\\Assembly-CSharp.csproj",
         "projectName": "Assembly-CSharp",
-        "projectPath": "C:\\Users\\Gustavo\\TCC\\Project Lung\\Assembly-CSharp.csproj",
+        "projectPath": "C:\\Users\\Gustavo\\ecos1.1\\TCC\\Ecos da Mata\\Assembly-CSharp.csproj",
         "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gustavo\\TCC\\Project Lung\\Temp\\obj\\Assembly-CSharp\\",
+        "outputPath": "C:\\Users\\Gustavo\\ecos1.1\\TCC\\Ecos da Mata\\Temp\\obj\\Assembly-CSharp\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config"

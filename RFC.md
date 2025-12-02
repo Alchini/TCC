@@ -12,9 +12,9 @@ O MVP do projeto prevê:
 
 -1 área (floresta) com exploração livre.
 
--1 batalha contra criatura folclórica.
+~~-1 batalha contra criatura folclórica.~~
 
--Códice desbloqueáveil com informações reais apó a batalha.
+~~-Códice desbloqueáveil com informações reais apó a batalha.~~
 
 -Arte em pixel art sombria com paleta terrosa.
 
@@ -47,9 +47,9 @@ Este projeto busca preencher essa lacuna por meio do desenvolvimento de um jogo 
 
 -Criar e animar ao menos 5 inimigos baseados em lendas brasileiras.
 
--Desenvolver um sistema de corrupção progressiva que transforme o mundo conforme o progresso do jogador.
+~~-Desenvolver um sistema de corrupção progressiva que transforme o mundo conforme o progresso do jogador.~~
 
--Integrar códices educativos com informações reais sobre as lendas, desbloqueados após eventos importantes.
+~~-Integrar códices educativos com informações reais sobre as lendas, desbloqueados após eventos importantes.~~
 
 -Realizar testes com jogadores para balancear o tom de horror e o conteúdo pedagógico.
 
@@ -67,13 +67,13 @@ O jogador assume o papel de um jovem em busca de seus pais desaparecidos em regi
 
 -Exploração livre das áreas principais.
 
--Sistema de corrupção progressiva que transforma o ambiente de forma visual e mecânica conforme o jogador elimina criaturas.
+~~-Sistema de corrupção progressiva que transforma o ambiente de forma visual e mecânica conforme o jogador elimina criaturas.~~
 
--Quebra de quarta parede em momentos-chave para aumentar o horror psicológico e envolver o jogador diretamente.
+~~-Quebra de quarta parede em momentos-chave para aumentar o horror psicológico e envolver o jogador diretamente.~~
 
 -Diálogos ramificados com NPCs que explicam mitos e lendas de forma opcional.
 
--Desbloqueio de códices educativos contendo informações reais sobre cada criatura após batalhas.
+~~-Desbloqueio de códices educativos contendo informações reais sobre cada criatura após batalhas.~~
 
 <img src="https://imgur.com/x3tPbxF.png" alt="Diagrama de Gameplay" width="600"/>
 
@@ -131,7 +131,7 @@ Descrição detalhada da proposta, incluindo requisitos de software, arquitetura
   - Inspirações: Hyper Light Drifter, Darkest Dungeon (clima), Blasphemous (ambiente).
 - **UI/UX:** 
   - Menus minimalistas com foco em legibilidade.
-  - Tela de pause com curiosidades folclóricas desbloqueadas.
+  - ~~Tela de pause com curiosidades folclóricas desbloqueadas.~~
   - Diálogos ramificados com NPCs opcionais para manter ritmo da exploração.
 - **Som:**
   - Design sonoro atmosférico com sons ambientes e efeitos para sustos leves.
@@ -148,7 +148,7 @@ Descrição detalhada da proposta, incluindo requisitos de software, arquitetura
   - Scenes separadas para cada área (Floresta, Cemitério, Caverna).
   - Prefabs para inimigos, NPCs, itens e triggers de corrupção.
   - ScriptableObjects para dados de criaturas e códices.
-  - Sistema de Save/Load com PlayerPrefs ou arquivo JSON.
+  - ~~Sistema de Save/Load com PlayerPrefs ou arquivo JSON.~~
 
 ### 3.4. Stack Tecnológica  
 
