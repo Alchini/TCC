@@ -274,6 +274,32 @@ A arquitetura reflete algumas **decisões importantes de engenharia**:
 
 ---
 
+## Resultados do projeto
+
+* Para a validação do resultados esperados pelo game, foi disponibilizada uma build jogável para um grupo seleto de pessoas, após o fim do game, o grupo respondeu uma pesquisa sobre sua experência. Os principais resultados foram:
+  
+* A faixa etária dos jogadores:
+  
+![FaixaEtaria](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Images/faixa.png)
+
+* O que mais motivou o jogador a continuar jogando:
+  
+![Motivacao](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Images/Motivac%CC%A7a%CC%83o.png)
+
+* O quanto o jogador se divertiu em uma escala de 1 a 5:
+  
+![Diversao](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Images/Diversa%CC%83o.png)
+
+* O quanto o jogador se sentiu cativado a aprender mais de 1 a 5:
+  
+![Curiosidade](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Images/Curiosidade.png)
+
+Nos testes com 19 participantes, 36,8% atribuíram nota 3 para o quanto ficaram curiosos em saber mais sobre o folclore brasileiro após jogar, 42,1% deram nota 4 e 15,8% nota 5. Isso nos indica que 94,7% dos jogadores ficaram interessados em conhecer mais sobre o tema, mostrando que o game conseguiu estimular o conhecimento.
+
+
+
+---
+
 ## Instruções de Uso e Extensão
 
 ### Adicionar um Novo NPC Folclórico
@@ -312,4 +338,4 @@ A arquitetura reflete algumas **decisões importantes de engenharia**:
 * Expandir o sistema de *quests* para múltiplas linhas narrativas (ex.: diferentes regiões / lendas).
 * Adicionar sistema de **journal/caderno** onde o jogador registra lendas e interpretações.
 * Refinar *feedback* visual e sonoro para tornar a experiência de descoberta ainda mais marcante.
-* Desenvolver a BossFight citada no [RFC](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/RFC.md) (A bossfight já consta com sua lógica em funcionamento e podem ser encontradas nos arquivos [Enemy_Combat.cs](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Assets/Scripts/Enemy_Combat.cs), [Enemy__Movement_Moose.cs](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Assets/Scripts/Enemy_Movement_Mosse.cs)
+* Desenvolver a BossFight citada no [RFC](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/RFC.md) (A bossfight já consta com sua lógica em funcionamento, a mesma apenas foi desativada para a versão final, podendo ser encontrada nos arquivos [Enemy_Combat.cs](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Assets/Scripts/Enemy_Combat.cs), [Enemy__Movement_Moose.cs](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Assets/Scripts/Enemy_Movement_Mosse.cs)
