@@ -95,14 +95,12 @@ flowchart TD
 ### Movimento do Jogador (`PlayerMovement`)
 * Lê eixos de entrada padrão **"Horizontal"** e **"Vertical"**.
 * Usa **`Rigidbody2D.linearVelocity`** para controlar o movimento.
-* Controla direção de *sprite* (flip horizontal), animações e efeito de **knockback**.
-* Implementa lógica de *footsteps* (sons de passos) com *timer* e `AudioManager`.
+* Controla direção de *sprite* (flip horizontal).
 
 ### NPC e Sistema de Wander (`NPC`, `NPC_Wander`, `NPC_Talk`)
 * **`NPC`:** Gerencia estados (`Default`, `Idle`, `Wander`, `Talk`), habilitando/desabilitando componentes apropriados.
 * **`NPC_Wander`:** Define uma **área retangular de patrulha** (`WanderWidth`, `WanderHeigh`, `StartingPosition`), escolhe alvos aleatórios e pausa o NPC antes de um novo destino.
 * **`NPC_Talk`:** Pausa o movimento, usa `DialogueManager` para iniciar/avançar diálogo ao pressionar o botão **"Interact"** e toca sons de UI.
-
 
 ```mermaid
 stateDiagram-v2
@@ -120,6 +118,32 @@ stateDiagram-v2
     Wander --> Talk: Player Interage (trigger)
 
     Talk --> Idle: Diálogo Encerrado (OnDialogueEnded)
+```
+
+
+### Estrutura de Dialogação (Fluxo Narrativo)
+
+Os diálogos de Ecos da Mata são estruturados para permitir que cada NPC ofereça conhecimento cultural, pistas narrativas e avanço da quest.
+Abaixo, um fluxo simplificado mostrando como um diálogo se desenvolve:
+
+```mermaid
+flowchart TD
+    A["Jogador se aproxima do NPC"] --> B["Trigger de Interação Ativado"]
+    B --> C["DialogueManager Inicia Diálogo"]
+    C --> D["Exibe Linha de Texto"]
+    D --> E{"Há Opções de Resposta?"}
+    
+    E -- Sim --> F["Jogador escolhe uma opção"]
+    F --> G["Mostra nova linha baseada na escolha"]
+    G --> E
+    
+    E -- Não --> H["Última linha do diálogo"]
+    H --> I["DialogueManager Encerra Diálogo"]
+    
+    I --> J["Atualiza Histórico de Diálogo"]
+    %% AQUI ESTAVA O ERRO: Adicionadas aspas para proteger os parênteses
+    I --> K["Atualiza Quest (se aplicável)"]
+    I --> L["Retorno ao Mundo para Exploração"]
 ```
 
 ### Sistema de Diálogo (`DialogueManager` + `DialogueSO` + `DialogueHistoryTracker`)
@@ -156,39 +180,6 @@ Essa abordagem data-driven permite que:
 
 Em resumo, o game foi pensado para ser um projeto vivo, onde o conteúdo pode ser ampliado continuamente por desenvolvedores, designers ou estudiosos do folclore.
 
-
----
-
-## Instruções de Uso e Extensão
-
-### Adicionar um Novo NPC Folclórico
-
-1.  Criar um **`ActorSO`** e um **`DialogueSO`**.
-2.  Instanciar um prefab/base de NPC na cena com **`Rigidbody2D`**, **`Animator`**, **`NPC`**, **`NPC_Wander`** (e `NPC_Talk`).
-3.  Ajustar: `StartingPosition`, `WanderWidth` e `WanderHeigh` para definir a área de patrulha (`NPC_Wander`).
-4.  Se fizer parte da *quest*: Adicioná-lo ao array **`pontosDeInteresseNPCs`** do `FolkloreQuestManager`.
-
-### Adicionar um Novo Local de Interesse
-
-1.  Criar um **`LocationSO`**.
-2.  Na cena, criar um `GameObject` com **`Collider2D` (trigger)** no local desejado.
-3.  No script associado ao *trigger*, chamar:
-    * `FolkloreQuestManager.Instance.NotifyLocationVisited(locationSO)` (para iniciar a *quest* se for o `forceQuestStartLocation`).
-    * `FolkloreQuestManager.Instance.RegistrarLocal(locationSO)` (para registrar o local como descoberto, se estiver em `pontosDeInteresseLocais`).
-
----
-
-
-## Instruções de Execução
-
-1.  **Acesse o game pelo link**: [Ecos Da Mata](https://alchini.itch.io/ecos-da-mata)
-
-2.  **Baixe o arquivo .rar**
-
-3.  **Descompacte**
-
-4.  Acesse o jogo através do executável **"Ecos da Mata.exe"**
-   
 ---
 
 ## Testes Automatizados
@@ -277,11 +268,43 @@ A imagem mostra a WanderWidth e Hight em funcionamento:
 A arquitetura reflete algumas **decisões importantes de engenharia**:
 
 * **Singletons para sistemas centrais:** `DialogueManager`, `DialogueHistoryTracker` e `FolkloreQuestManager` são singletons para facilitar acesso global em um projeto de escopo reduzido.
-* **Uso de `Rigidbody2D.linearVelocity` para movimento:** Movimento do jogador e NPCs é baseado em física simples, garantindo compatibilidade com colisões 2D e *knockback*.
+* **Uso de `Rigidbody2D.linearVelocity` para movimento:** Movimento do jogador e NPCs é baseado em física simples, garantindo compatibilidade com colisões 2D.
 * **Área de Wander em volta de `StartingPosition`:** `NPC_Wander` utiliza um retângulo centrado em `StartingPosition`, o que é coberto por testes automatizados.
 * **Progressão de quest baseada em diálogo + local:** O design é focado em **descoberta de folclore** (falar com NPCs e visitar locais) como a forma de progredir.
 
 ---
+
+## Instruções de Uso e Extensão
+
+### Adicionar um Novo NPC Folclórico
+
+1.  Criar um **`ActorSO`** no local "Ecos da Mata/Assets/Scripts/NPC Scripts/ActorSO'S" e um **`DialogueSO`** no local "Ecos da Mata/Assets/Scripts/NPC Scripts/DialogueSO'S".
+2.  Instanciar um prefab/base de NPC na cena com **`Rigidbody2D`**, **`Animator`**, **`NPC`**, **`NPC_Wander`** (e `NPC_Talk`).
+3.  Ajustar: `StartingPosition`, `WanderWidth` e `WanderHeigh` para definir a área de patrulha (`NPC_Wander`).
+4.  Se fizer parte da *quest*: Adicioná-lo ao array **`pontosDeInteresseNPCs`** do `FolkloreQuestManager`.
+
+### Adicionar um Novo Local de Interesse
+
+1.  Criar um **`LocationSO`** em Ecos da "Mata/Assets/Scripts/NPC Scripts/LocationSO's".
+2.  Na cena, criar um `GameObject` com **`Collider2D` (trigger)** no local desejado.
+3.  No script associado ao *trigger*, chamar:
+    * `FolkloreQuestManager.Instance.NotifyLocationVisited(locationSO)` (para iniciar a *quest* se for o `forceQuestStartLocation`).
+    * `FolkloreQuestManager.Instance.RegistrarLocal(locationSO)` (para registrar o local como descoberto, se estiver em `pontosDeInteresseLocais`).
+
+---
+
+
+## Instruções de Execução
+
+1.  **Acesse o game pelo link**: [Ecos Da Mata](https://alchini.itch.io/ecos-da-mata)
+
+2.  **Baixe o arquivo .rar**
+
+3.  **Descompacte**
+
+4.  **Acesse o jogo através do executável** "Ecos da Mata.exe"
+   
+--- 
 
 ## Trabalhos Futuros
 
@@ -289,3 +312,4 @@ A arquitetura reflete algumas **decisões importantes de engenharia**:
 * Expandir o sistema de *quests* para múltiplas linhas narrativas (ex.: diferentes regiões / lendas).
 * Adicionar sistema de **journal/caderno** onde o jogador registra lendas e interpretações.
 * Refinar *feedback* visual e sonoro para tornar a experiência de descoberta ainda mais marcante.
+* Desenvolver a BossFight citada no [RFC](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/RFC.md) (A bossfight já consta com sua lógica em funcionamento e podem ser encontradas nos arquivos [Enemy_Combat.cs](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Assets/Scripts/Enemy_Combat.cs), [Enemy__Movement_Moose.cs](https://github.com/Alchini/TCC_Ecos_Da_Mata/blob/main/Ecos%20da%20Mata/Assets/Scripts/Enemy_Movement_Mosse.cs)
