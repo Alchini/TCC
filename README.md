@@ -19,7 +19,7 @@ A maior parte dos jogos sobre folclore brasileiro é pensada como material didá
 ## Documento de Design do Jogo (GDD)
 
 O Game Design Document (GDD) do projeto está disponível no repositório e descreve todos os elementos de design, mecânicas, narrativa, personagens e diretrizes criativas do jogo.
-Você pode acessá-lo aqui: [GDD](https://github.com/Alchini/TCC/blob/main/Ecos%20da%20Mata/Ecos%20da%20Mata%20GDD.docx)
+Você pode acessá-lo aqui: [GDD](https://github.com/Alchini/TCC/blob/main/Ecos%20da%20Mata/Ecos%20da%20Mata%20GDD.pdf)
 
 --- 
 
@@ -136,9 +136,25 @@ stateDiagram-v2
 
 ---
 
-## Instruções de Execução
+## Arquitetura Escalável e Orientada a Conteúdo
 
-1.  **Em Desenvolvimento**: O game ainda não possui uma build própria gerada**
+Um dos pilares do desenvolvimento de Ecos da Mata foi criar uma base flexível e expansível, capaz de evoluir sem necessidade de reescrever partes fundamentais do jogo.
+Para isso, o projeto utiliza amplamente ScriptableObjects, que centralizam dados de narrativa e configuração.
+
+Com isso:
+
+* NPCs são definidos por ActorSO, permitindo alterar nome, retrato, falas e identidade de forma independente do código.
+* Diálogos são totalmente configuráveis por DialogueSO, facilitando a criação de novas conversas, ramificações e respostas.
+* Quests e locais de interesse podem ser adicionados ou removidos apenas editando listas no FolkloreQuestManager, sem modificar scripts.
+
+Essa abordagem data-driven permite que:
+
+* Qualquer pessoa possa criar personagens, diálogos e quests;
+* Designers e pesquisadores possam testar novas narrativas rapidamente;
+* O jogo cresça sem risco de “quebrar” sistemas existentes;
+* Novas lendas e regiões sejam incorporadas futuramente com mínimo esforço.
+
+Em resumo, o game foi pensado para ser um projeto vivo, onde o conteúdo pode ser ampliado continuamente por desenvolvedores, designers ou estudiosos do folclore.
 
 
 ---
@@ -162,13 +178,89 @@ stateDiagram-v2
 
 ---
 
+
+## Instruções de Execução
+
+1.  **Acesse o game pelo link**: [Ecos Da Mata](https://alchini.itch.io/ecos-da-mata)
+
+2.  **Baixe o arquivo .rar**
+
+3.  **Descompacte**
+
+4.  Acesse o jogo através do executável **"Ecos da Mata.exe"**
+   
+---
+
 ## Testes Automatizados
 
 O projeto inclui alguns testes usando o **Unity Test Framework / NUnit**.
 
 ### Exemplo - `NPC_Wander` – Teste de Área de Movimentação
-O script de teste **`NPC_Wander_Tests`** verifica se o NPC sempre escolhe um novo alvo dentro da área configurada de *wander*.
+O teste NPC_Wander_Picks_New_Target_Inside_Area garante que o NPC sempre escolha um novo destino dentro da área configurada de patrulha, evitando que o personagem saia dos limites esperados do cenário.
 
+Esse teste é fundamental para:
+
+* assegurar a coerência da movimentação dos NPCs;
+* impedir comportamentos inesperados, como o NPC atravessar paredes ou andar para fora do mapa;
+* validar automaticamente partes críticas do comportamento sem depender de inspeção manual.
+
+## Como o Teste Funciona
+
+O teste é estruturado em três etapas clássicas: Arrange, Act e Assert.
+
+1. Arrange – Montagem do ambiente de teste
+
+* O ambiente mínimo para rodar o NPC_Wander é criado em tempo de execução:
+* Um GameObject vazio que recebe um Rigidbody2D (necessário para o script).
+*Um Animator em um child object, já que o script usa GetComponentInChildren<Animator>().
+*O próprio componente NPC_Wander, adicionado após o Rigidbody para respeitar a ordem de inicialização.
+
+### A área de patrulha também é configurada manualmente:
+
+```bash
+wander.StartingPosition = Vector2.zero;
+wander.WanderWidth = 4f;
+wander.WanderHeigh = 4f;
+```
+
+* Isso define um retângulo entre (-2, -2) e (2, 2).
+
+2. Act – Execução do comportamento
+
+* Para forçar o NPC a gerar um novo destino, o teste chama diretamente a coroutine:
+wander.StartCoroutine("PauseAndPickNewDestination");
+
+* Após isso, o teste espera o tempo necessário (pauseDuration + 0.05f) até que o NPC tenha escolhido um novo target.
+
+3. Assert – Validação do resultado
+
+Por fim, o teste verifica se o novo destino (wander.target) está dentro da área esperada, comparando coordenada por coordenada com os limites calculados:
+
+```bash
+Assert.IsTrue(
+    wander.target.x >= wander.StartingPosition.x - halfWidth &&
+    wander.target.x <= wander.StartingPosition.x + halfWidth &&
+    wander.target.y >= wander.StartingPosition.y - halfHeight &&
+    wander.target.y <= wander.StartingPosition.y + halfHeight,
+    $"Target fora da área! Target = {wander.target}"
+);
+```
+
+* Se o destino estiver fora da área, o teste falha, indicando um possível problema no algoritmo de movimentação.
+
+![Teste](https://github.com/Alchini/TCC/blob/main/Ecos%20da%20Mata/Images/tests1.png)
+
+![TesteResult](https://github.com/Alchini/TCC/blob/main/Ecos%20da%20Mata/Images/testsConc.png)
+
+Como podemos notar, esse teste automatizado confirma que o comportamento de wander dos NPCs é confiável e determinístico, garantindo que:
+
+* Todos os deslocamentos gerados respeitam o retângulo configurado;
+* NPCs permanecem dentro do espaço designado pelo designer;
+* Futuras alterações no script não quebrem esse comportamento por acidente (regression testing).
+
+A imagem mostra a WanderWidth e Hight em funcionamento: 
+
+![Teste](https://github.com/Alchini/TCC/blob/main/Ecos%20da%20Mata/Images/Paths.png)
 
 
 ### Como Rodar os Testes
